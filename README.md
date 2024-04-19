@@ -1,37 +1,45 @@
-Haevn
-=====
+# Haevn
 
 Haevn is a haven for hacking, designed to help HAck EVerythiNg.
 
-This program is currently in alpha and in heavy development mode (on our free time), so expect unstable behaviors as we develop. We currently have a "stable" master (that is slightly useable) and all current work will be done on the "unstable" branch. If you want to checkout that branch, it will have more current developments included, but it might not work as well as we rework data structures, add new functionality, test new features, etc. 
+This program is currently in alpha and in heavy development mode (on our free time), so expect unstable behaviors as we develop. We currently have a "stable" master (that is slightly useable) and all current work will be done on the "unstable" branch. If you want to checkout that branch, it will have more current developments included, but it might not work as well as we rework data structures, add new functionality, test new features, etc.
 
-Dependencies
-============
+# 2024 Information
+
+19 April -- Running the meteor app technically works now, haven't tested any of the disassembly stuff to see if it's still working.
+
+```
+docker compose build
+docker compose up
+```
+
+# Dependencies
+
 ```
 apt-get install capstone
 pip install pymongo
 pip install capstone
 ```
 
-Architecture
-============
+# Architecture
+
 ```
 Meteor
     - Modifies disassembly in MongoDB
     - Launches disassembler_cli.py to do disassembly
 disassembler_cli.py
-    - Does disassembly 
+    - Does disassembly
     - Modifies disassembly in MongoDB
 ```
 
-Directory Hierarchy
-===================
+# Directory Hierarchy
+
 ```
 haevn/
     disassembler/
         disassembler_cli.py
         disassembler.py
-            - determines format 
+            - determines format
             - parses using pyelftools/etc
             - feeds bytes to strategy
             - applies debug info/strings/labels
@@ -48,7 +56,7 @@ haevn/
                 x86_64.py
                 arm.py
                 mips.py
-                ... 
+                ...
     haevn.js
     haevn.css
     haevn.html
