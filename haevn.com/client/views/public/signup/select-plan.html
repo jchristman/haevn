@@ -1,0 +1,80 @@
+<template name="selectPlan">
+<table id="feature-table">
+    <colgroup class="basic"></colgroup>
+    <colgroup class="plus"></colgroup>
+    <colgroup class="premium" id="featured"></colgroup>
+    <colgroup class="pro"></colgroup>
+    <thead>
+        <tr>
+            <th class=".feature">Feature</th>
+            {{#each plans}}
+                <th class="{{name}}"><span>{{capitalize name}}</span></th>
+            {{/each}}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class=".feature">Storage</td>
+            {{#each plans}}
+                <td class="{{name}}">{{storage.amount}}{{storage.units}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">Max Teams</td>
+            {{#each plans}}
+                <td class="{{name}}">{{teams}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">x86</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.arch "x86"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">x64</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.arch "x64"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">ARM</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.arch "ARM"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">ARM64</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.arch "ARM64"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">ELF</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.file_formats "ELF"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">PE</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.file_formats "PE"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <td class=".feature">Mach-O</td>
+            {{#each plans}}
+                <td class="{{name}}">{{#if contains haevn.file_formats "Mach-O"}}<span class="glyphicon glyphicon-ok"></span>{{/if}}</td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>
+<div class="list-group select-plan">
+    {{#each plans}}
+    <a href="#" class="list-group-item">
+        <input type="radio" name="selectPlan" id="selectPlan_{{name}}" value="{{name}}">
+        {{capitalize name}}: {{limitString limit}} <span class="pull-right">{{amount.usd}} / {{interval}}</span>
+    </a>
+    {{/each}}
+</div>
+</template>

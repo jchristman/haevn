@@ -1,0 +1,13 @@
+<template name="disassembler">
+<div id="disassemblyBox" class="tabBox">
+    {{#with setup}}
+        {{> CS.Datatable src='disassembler' sortVar='addr' columns=columns css=css altTemplate='no_disassembly'}}
+    {{/with}}
+</div>
+</template>
+
+<template name="no_disassembly">
+    <div class="no_disassembly">
+        <h2>Click Here to Disassemble a File</h2>
+    </div>
+</template>

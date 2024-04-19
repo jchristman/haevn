@@ -1,0 +1,8 @@
+#feature-table th { height: 120px; padding-bottom: 14px; vertical-align: bottom; }
+
+.feature     { background-color: #fff3d8; }
+.trial       { background-color: #fdefd2; }
+.educational { background-color: #e9eaca; }
+.basic       { background-color: #d5e4bc; }
+.standard    { background-color: #c1dcb7; }
+.premium     { background-color: #bad6c8; }

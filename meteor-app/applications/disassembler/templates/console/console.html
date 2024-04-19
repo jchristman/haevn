@@ -1,0 +1,21 @@
+<template name="console">
+<div id="consoleBox" class="tabBox withInputBar">
+    <div id="consoleBoxContent">
+        <table>
+        {{#each consoleMessages}}
+                {{> console_message}}
+        {{else}}
+            No output yet.
+        {{/each}}
+        </table>
+    </div>
+</div>
+<input id="consoleMessage" class="tabBox inputBar" type="text" placeholder="Type command here...">
+</template>
+
+<template name="console_message">
+<tr>
+    <td>{{#if isNewTimestamp timestamp}}{{prettifyDate timestamp}}{{/if}}</td>
+    <td>{{data}}</td>
+</tr>
+</template>

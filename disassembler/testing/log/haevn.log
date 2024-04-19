@@ -1,0 +1,31 @@
+03-25 14:32:30 - __main__ - DEBUG - Building disassembler object
+03-25 14:32:31 - __main__ - INFO - Starting to disassemble file
+03-25 14:32:32 - predisassemblers.elf - INFO - Predisassembling the ELF
+03-25 14:32:33 - strategies.linear - INFO - Disassembling executable section: .init -- Length: 26
+03-25 14:32:34 - strategies.linear - INFO - Disassembling executable section: .plt -- Length: 64
+03-25 14:32:34 - strategies.linear - INFO - Disassembling executable section: .text -- Length: 370
+03-25 14:32:36 - strategies.linear - INFO - Disassembling executable section: .fini -- Length: 9
+03-25 14:32:37 - strategies.strategy - INFO - Disassembling non_executable section: .interp -- Length: 28
+03-25 14:32:37 - strategies.strategy - INFO - Disassembling non_executable section: .note.ABI-tag -- Length: 32
+03-25 14:32:37 - strategies.strategy - INFO - Disassembling non_executable section: .note.gnu.build-id -- Length: 36
+03-25 14:32:38 - strategies.strategy - INFO - Disassembling non_executable section: .gnu.hash -- Length: 28
+03-25 14:32:38 - strategies.strategy - INFO - Disassembling non_executable section: .dynsym -- Length: 96
+03-25 14:32:38 - strategies.strategy - INFO - Disassembling non_executable section: .dynstr -- Length: 61
+03-25 14:32:39 - strategies.strategy - INFO - Disassembling non_executable section: .gnu.version -- Length: 8
+03-25 14:32:39 - strategies.strategy - INFO - Disassembling non_executable section: .gnu.version_r -- Length: 32
+03-25 14:32:39 - strategies.strategy - INFO - Disassembling non_executable section: .rela.dyn -- Length: 24
+03-25 14:32:40 - strategies.strategy - INFO - Disassembling non_executable section: .rela.plt -- Length: 72
+03-25 14:32:40 - strategies.strategy - INFO - Disassembling non_executable section: .rodata -- Length: 18
+03-25 14:32:40 - strategies.strategy - INFO - Disassembling non_executable section: .eh_frame_hdr -- Length: 52
+03-25 14:32:41 - strategies.strategy - INFO - Disassembling non_executable section: .eh_frame -- Length: 236
+03-25 14:32:42 - strategies.strategy - INFO - Disassembling non_executable section: .init_array -- Length: 8
+03-25 14:32:42 - strategies.strategy - INFO - Disassembling non_executable section: .fini_array -- Length: 8
+03-25 14:32:42 - strategies.strategy - INFO - Disassembling non_executable section: .jcr -- Length: 8
+03-25 14:32:42 - strategies.strategy - INFO - Disassembling non_executable section: .dynamic -- Length: 464
+03-25 14:32:44 - strategies.strategy - INFO - Disassembling non_executable section: .got -- Length: 8
+03-25 14:32:44 - strategies.strategy - INFO - Disassembling non_executable section: .got.plt -- Length: 48
+03-25 14:32:45 - strategies.strategy - INFO - Disassembling non_executable section: .data -- Length: 16
+03-25 14:32:45 - strategies.strategy - INFO - Disassembling non_executable section: .bss -- Length: 8
+03-25 14:32:45 - strategies.strategy - INFO - Disassembling non_executable section: .comment -- Length: 36
+03-25 14:32:46 - strategies.strategy - INFO - Disassembling non_executable section: .shstrtab -- Length: 248
+03-25 14:32:47 - __main__ - INFO - Done disassembling file

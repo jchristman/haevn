@@ -1,0 +1,9 @@
+#consoleBoxContent table {
+    width: 100%;
+}
+
+#consoleBoxContent table > tr > td {
+    padding: 2px;
+    border: 1px solid #AAA;
+    white-space: pre;
+}

@@ -1,0 +1,64 @@
+.no_disassembly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    cursor: pointer;
+    background: #ccc;
+    text-align: center;
+}
+
+.disassembler-table {
+    border: none;
+    width: 100%;
+}
+
+.disassembler-row {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.disassembler-row:nth-child(even) {
+    background: #DDD;
+}
+
+.disassembler-row:nth-child(odd) {
+    background: #FFF;
+}
+
+.cs_td {
+    border: none;
+}
+
+.cs_td.sec {
+    width: 20%;
+}
+
+.cs_td.addr {
+    color: red;
+    width: 15%;
+}
+
+.cs_td.mnem {
+    color: green;
+    width: 15%;
+}
+
+.cs_td.op {
+    color: blue;
+    width: 50%;
+}
+
+.cs_td.op .val {
+    cursor: default;
+}
+
+div.op {
+    display: inline;
+}

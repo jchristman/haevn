@@ -1,0 +1,11 @@
+<template name="chat">
+<div id="chatBox" class="tabBox withInputBar">
+    {{#each chatMessages}}
+        [{{timestamp}}] {{username}}: {{message}}<br>
+    {{else}}
+        No messages yet.
+    {{/each}}
+</div>
+<div id="usersOnLine" class="tabBox withInputBar"></div>
+<input id="chatMessage" class="tabBox inputBar" type="text" placeholder="Type a message here...">
+</template>
