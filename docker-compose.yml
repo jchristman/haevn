@@ -1,0 +1,19 @@
+version: "3"
+services:
+  app:
+    build:
+      context: ./meteor-app
+      dockerfile: Dockerfile
+    platform: linux/x86_64
+    volumes:
+      - ./meteor-app:/app
+      - meteor_packages:/home/node/.meteor/packages
+    ports:
+      - "3000:3000"
+    environment:
+      - METEOR_ALLOW_SUPERUSER=true
+      - ROOT_URL=http://0.0.0.0:3000
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+
+volumes:
+  meteor_packages:
